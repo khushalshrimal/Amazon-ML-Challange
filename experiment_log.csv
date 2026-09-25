@@ -1,0 +1,7 @@
+experiment_id,date,description,data_version,blocking_method,features,model,threshold,validation_precision,validation_recall,validation_f05,candidate_reduction,notes,submission_id
+EXP_000,2026-09-25,Project setup completed,v1.0,None,None,None,None,None,None,None,None,Workspace organized and verified,None
+EXP_001,2026-09-25,Baseline A - Exact Raw Match,v1.0,Exact Match,Raw String Match,None,None,0.0564,0.0564,0.0564,99.999%,Exact raw name+address+country match,None
+EXP_002,2026-09-25,Baseline B - Normalized Match,v1.0,Exact Match,Normalized String Match,None,None,0.0565,0.0564,0.0565,99.999%,Normalized name+address+country match,None
+EXP_003,2026-09-25,Baseline C - Normalized No Country,v1.0,Exact Match,Normalized String Match No Country,None,None,0.0565,0.0564,0.0565,99.999%,Normalized name+address ignoring country,None
+EXP_004,2026-09-25,Candidate Blocking - MultiKey Union,v1.0,MultiKey (Name Prefix | Addr Token),Token Prefix + Address Token,None,None,None,None,None,99.753%,Search space reduced from 20B to 49.4M pairs,None
+EXP_005,2026-09-25,1000 Entity Sanity Test Pipeline,v1.0,MultiPass (Name/Addr Pref2 + RareTok),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.90,0.9058,0.9524,0.9069,99.606%,Completed in 63.69s. LightGBM/XGBoost missing in env.,None

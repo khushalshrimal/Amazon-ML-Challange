@@ -1,0 +1,16 @@
+# Datasets (Ignored to prevent pushing multi-GB files to GitHub)
+dataset/
+6ab10eb3b23ba_student_resource/
+
+# Python Cache & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Temporary / OS files
+.DS_Store
+Thumbs.db
+*.log
