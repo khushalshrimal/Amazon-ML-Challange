@@ -1,10 +1,11 @@
-experiment_id,date,description,data_version,blocking_method,features,model,threshold,validation_precision,validation_recall,validation_f05,candidate_reduction,notes,submission_id
-EXP_000,2026-09-25,Project setup completed,v1.0,None,None,None,None,None,None,None,None,Workspace organized and verified,None
-EXP_001,2026-09-25,Baseline A - Exact Raw Match,v1.0,Exact Match,Raw String Match,None,None,0.0564,0.0564,0.0564,99.999%,Exact raw name+address+country match,None
-EXP_002,2026-09-25,Baseline B - Normalized Match,v1.0,Exact Match,Normalized String Match,None,None,0.0565,0.0564,0.0565,99.999%,Normalized name+address+country match,None
-EXP_003,2026-09-25,Baseline C - Normalized No Country,v1.0,Exact Match,Normalized String Match No Country,None,None,0.0565,0.0564,0.0565,99.999%,Normalized name+address ignoring country,None
-EXP_004,2026-09-25,Candidate Blocking - MultiKey Union,v1.0,MultiKey (Name Prefix | Addr Token),Token Prefix + Address Token,None,None,None,None,None,99.753%,Search space reduced from 20B to 49.4M pairs,None
-EXP_005,2026-09-25,1000 Entity Sanity Test Pipeline,v1.0,MultiPass (Name/Addr Pref2 + RareTok),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.90,0.9058,0.9524,0.9069,99.606%,Completed in 63.69s. LightGBM/XGBoost missing in env.,None
-EXP_006,2026-09-25,5000 Entity Validation Run,v1.0,MultiPass (Name/Addr Pref2 + RareTok),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.95,0.9531,0.9489,0.9472,99.606%,Completed in 132.32s. Optimal threshold T*=0.95.,None
-EXP_007,2026-09-25,Phase 5 High-Recall Candidate Blocking,v1.0,MultiKey Union (Name/Addr/3Gram),Inverted Index Sets,None,None,None,0.9865,None,99.504%,Recall boosted from 91.22% to 98.65% across 5k S1 entities.,None
-EXP_008,2026-09-25,Phase 6 Final 5K End-to-End Validation,v1.0,MultiKey Union (Strategy 3),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.98,0.9394,0.9308,0.9301,99.504%,Completed in 243.78s. High candidate recall 98.64%.,None
+experiment_id,date,description,data_version,blocking_method,features,model,threshold,validation_precision,validation_recall,validation_f05,candidate_reduction,notes,submission_id,exp_id,phase,blocker_type,val_sample_size,candidate_recall,model_type,optimal_threshold,macro_f05,precision,recall,total_runtime_s,status
+EXP_000,2026-09-25,Project setup completed,v1.0,,,,,,,,,Workspace organized and verified,,,,,,,,,,,,,
+EXP_001,2026-09-25,Baseline A - Exact Raw Match,v1.0,Exact Match,Raw String Match,,,0.0564,0.0564,0.0564,99.999%,Exact raw name+address+country match,,,,,,,,,,,,,
+EXP_002,2026-09-25,Baseline B - Normalized Match,v1.0,Exact Match,Normalized String Match,,,0.0565,0.0564,0.0565,99.999%,Normalized name+address+country match,,,,,,,,,,,,,
+EXP_003,2026-09-25,Baseline C - Normalized No Country,v1.0,Exact Match,Normalized String Match No Country,,,0.0565,0.0564,0.0565,99.999%,Normalized name+address ignoring country,,,,,,,,,,,,,
+EXP_004,2026-09-25,Candidate Blocking - MultiKey Union,v1.0,MultiKey (Name Prefix | Addr Token),Token Prefix + Address Token,,,,,,99.753%,Search space reduced from 20B to 49.4M pairs,,,,,,,,,,,,,
+EXP_005,2026-09-25,1000 Entity Sanity Test Pipeline,v1.0,MultiPass (Name/Addr Pref2 + RareTok),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.9,0.9058,0.9524,0.9069,99.606%,Completed in 63.69s. LightGBM/XGBoost missing in env.,,,,,,,,,,,,,
+EXP_006,2026-09-25,5000 Entity Validation Run,v1.0,MultiPass (Name/Addr Pref2 + RareTok),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.95,0.9531,0.9489,0.9472,99.606%,Completed in 132.32s. Optimal threshold T*=0.95.,,,,,,,,,,,,,
+EXP_007,2026-09-25,Phase 5 High-Recall Candidate Blocking,v1.0,MultiKey Union (Name/Addr/3Gram),Inverted Index Sets,,,,0.9865,,99.504%,Recall boosted from 91.22% to 98.65% across 5k S1 entities.,,,,,,,,,,,,,
+EXP_008,2026-09-25,Phase 6 Final 5K End-to-End Validation,v1.0,MultiKey Union (Strategy 3),Fast Set Jaccard + 3gram + Digits,HistGradientBoosting,0.98,0.9394,0.9308,0.9301,99.504%,Completed in 243.78s. High candidate recall 98.64%.,,,,,,,,,,,,,
+,,LightGBM LGBMClassifier model training & threshold calibration (MIT License compliance),,,,,,,,,,,,EXP_009,Phase 7A,Strategy 3 Multi-Key Union,5000.0,98.64%,LightGBM (LGBMClassifier),0.98,0.9329,0.9416,0.9335,294.64,SUCCESS
