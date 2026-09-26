@@ -108,7 +108,7 @@ def validate_id_list_file(path, expected_header, col_label, required, valid_ids,
     self_matches, wrong_prefix, unknown = set(), set(), set()
     n_rows = empties = 0
 
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8", errors="replace") as f:
         header = f.readline()
         if not header:
             errors.append(f"{name} is empty.")

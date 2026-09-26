@@ -1,0 +1,14 @@
+{
+  "submission1_matching_results": "submission/Submission_1/matching_results.tsv",
+  "submission1_candidate_pairs": "submission/Submission_1/candidate_pairs.tsv",
+  "val_s1": "scratch/val_split/val_s1.tsv",
+  "val_targets": "scratch/val_split/val_targets.tsv",
+  "val_gt": "scratch/val_split/val_gt.tsv",
+  "lightgbm_model_v2": "models/lightgbm_model_v2.joblib",
+  "xgboost_model_v2": "models/xgboost_model_v2.joblib",
+  "val_features_cache_v2": "scratch/val_features_cache_v2.joblib",
+  "inference_checkpoint": "scratch/inference_checkpoint.json",
+  "output_matching_results": "output/matching_results.tsv",
+  "output_candidate_pairs": "output/candidate_pairs.tsv",
+  "final_config_v2": "submission/Submission_2/final_config.json"
+}

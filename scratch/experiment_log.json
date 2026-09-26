@@ -1,0 +1,33 @@
+[
+  {
+    "experiment_id": "EXP_01_VAL_SPLIT",
+    "description": "Created leakage-free validation split of 10,000 S1 entities and 434,567 targets",
+    "candidate_recall": "100.00%",
+    "macro_f05": "N/A",
+    "status": "COMPLETED"
+  },
+  {
+    "experiment_id": "EXP_02_BLOCKER_SEARCH",
+    "description": "Evaluated 7 blocker configurations; selected AdvancedBlocker(max_posting_size=100, use_prefix3=True) with stop-word filtering",
+    "candidate_recall": "98.83%",
+    "avg_candidates_per_s1": 348.5,
+    "status": "COMPLETED"
+  },
+  {
+    "experiment_id": "EXP_03_MODEL_ENSEMBLE",
+    "description": "Trained LightGBM v2 + XGBoost v2 on 32 features; evaluated ensemble blend at threshold 0.995",
+    "macro_f05": 0.9613,
+    "macro_precision": 0.9718,
+    "macro_recall": 0.9433,
+    "status": "COMPLETED"
+  },
+  {
+    "experiment_id": "EXP_04_FULL_TEST_INFERENCE_CHECKPOINT",
+    "description": "Processed first batch of 5,000 test S1 records; saved checkpoint and flushed output lines",
+    "processed_s1": 5000,
+    "total_s1": 1732544,
+    "matched_s1": 4541,
+    "total_matches": 19113,
+    "status": "PAUSED_SAFE"
+  }
+]

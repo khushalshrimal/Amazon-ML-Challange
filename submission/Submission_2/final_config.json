@@ -1,0 +1,43 @@
+{
+  "submission": "Submission_2",
+  "pipeline_version": "v2.0",
+  "blocker": {
+    "type": "AdvancedBlocker",
+    "max_posting_size": 100,
+    "use_prefix3": true,
+    "generic_stopwords": [
+      "private", "pvt", "limited", "ltd", "inc", "incorporated", "corp", "corporation",
+      "llc", "llp", "co", "company", "and", "or", "the", "for", "of", "in", "to", "a", "an",
+      "india", "us", "usa", "france", "fr", "unknown",
+      "door", "plot", "no", "number", "street", "st", "road", "rd", "avenue", "ave",
+      "boulevard", "blvd", "lane", "ln", "drive", "dr", "suite", "ste", "floor", "fl",
+      "flat", "building", "bldg", "house", "box", "po", "p", "o", "near", "opposite", "opp",
+      "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "rue"
+    ]
+  },
+  "features": {
+    "count": 32,
+    "module": "features_v2.py"
+  },
+  "models": [
+    {
+      "name": "lightgbm_v2",
+      "weight": 0.5,
+      "path": "models/lightgbm_model_v2.joblib"
+    },
+    {
+      "name": "xgboost_v2",
+      "weight": 0.5,
+      "path": "models/xgboost_model_v2.joblib"
+    }
+  ],
+  "threshold": 0.995,
+  "singleton_rule": "Allow empty match if candidate ensemble probability < 0.995",
+  "validation_metrics": {
+    "macro_f05": 0.9613,
+    "macro_precision": 0.9718,
+    "macro_recall": 0.9433,
+    "candidate_recall": 0.9883,
+    "candidates_per_s1": 348.5
+  }
+}

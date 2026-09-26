@@ -1,0 +1,14 @@
+Submission: 1
+Method: Standalone C++17 Multi-Threaded Entity Matching
+Compiler: g++ -O3
+S1 records: 1,732,544
+Matched: 1,548,410
+Unmatched: 184,134
+Candidate pairs processed: 82,000,430
+Execution time: 328 seconds
+Peak/observed RAM: <1.28 GB
+Validator: PASS
+Status: READY FOR SUBMISSION
+Date/time of archive creation: 2026-09-26T13:57:30+05:30
+Matching Results SHA-256: 5f9fae77809966c16591bd12cfecc78581dc383141cefda337ead467d3105a71
+Candidate Pairs SHA-256: d16e127108e10706dae4156f622eb5f84d049081942c6f6df61d94c6c33988df

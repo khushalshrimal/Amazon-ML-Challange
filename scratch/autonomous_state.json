@@ -1,0 +1,47 @@
+{
+  "status": "PAUSED_SAFE",
+  "timestamp": "2026-09-26T17:22:30+05:30",
+  "project": "C:\\Users\\khush\\OneDrive\\Desktop\\amzon ml challenge",
+  "current_stage": "STAGE_A_B_TOPK_RETRIEVAL_BENCHMARK_AND_INFERENCE_CHECKPOINT",
+  "current_task": "task-1029",
+  "pid": 19956,
+  "processed_s1": 5000,
+  "total_s1": 1732544,
+  "candidate_count": 1798101,
+  "matched_count": 4541,
+  "current_K": 50,
+  "current_threshold": 0.995,
+  "model_path": "models/lightgbm_model_v2.joblib",
+  "blocker_configuration": {
+    "blocker_type": "AdvancedBlocker",
+    "max_posting_size": 100,
+    "use_prefix3": true,
+    "generic_stopwords_filtered": true
+  },
+  "validation_results": {
+    "val_s1_count": 10000,
+    "val_targets_count": 434567,
+    "candidate_recall": "98.83%",
+    "avg_candidates_per_s1": 348.5,
+    "ensemble_val_macro_f05": 0.9613,
+    "ensemble_val_macro_precision": 0.9718,
+    "ensemble_val_macro_recall": 0.9433
+  },
+  "latest_successful_experiment": "Submission 2 Ensemble (LightGBM v2 + XGBoost v2) @ threshold 0.995",
+  "latest_checkpoint_path": "scratch/inference_checkpoint.json",
+  "latest_valid_output_paths": {
+    "matching_results": "output/matching_results.tsv",
+    "candidate_pairs": "output/candidate_pairs.tsv"
+  },
+  "reusable_artifacts": {
+    "submission1_frozen": true,
+    "val_split_exists": true,
+    "val_features_cache_v2_exists": true,
+    "lightgbm_model_v2_exists": true,
+    "xgboost_model_v2_exists": true,
+    "inference_checkpoint_exists": true,
+    "output_matching_results_exists": true,
+    "output_candidate_pairs_exists": true
+  },
+  "next_action": "type CONTINUE"
+}

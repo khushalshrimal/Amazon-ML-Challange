@@ -1,6 +1,18 @@
-# Datasets (Ignored to prevent pushing multi-GB files to GitHub)
+# Datasets & Large Submission Files (Ignored to prevent GitHub 100MB file limits)
 dataset/
 6ab10eb3b23ba_student_resource/
+
+# Large TSV Data Files (>100MB)
+output/*.tsv
+scratch/*.tsv
+scratch/val_split/*.tsv
+submission/Submission_1/*.tsv
+submission/Submission_2/*.tsv
+
+# Heavy Binary Artifacts & Executables
+*.exe
+*.npy
+*.joblib
 
 # Python Cache & Environment
 __pycache__/
